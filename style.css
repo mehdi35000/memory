@@ -1,0 +1,83 @@
+body{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+nav ul li{
+    margin-right: 60px;
+}
+
+#logo{
+    height: 40px;
+    width: 40px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
+h2{
+    text-align: center;
+    margin-top: 50px;
+}
+.memory-rules{
+    text-align: center;
+}
+
+.memory-rules ul{
+    list-style: none;
+}
+
+/*formilaire inscription*/
+
+fieldset {
+    border-radius: 7px;
+    border: 2px dotted black;
+}
+
+input {
+    height: 30px;
+    width: 400px;
+    border-radius: 7px;
+    border: 1px dotted rgb(0, 0, 0);
+    padding-left: 5px;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+    color: rgb(158, 116, 158);
+    text-align: right;
+    margin-right: 5px;
+}
+.sectionForm {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.labelGauche {
+    text-align: left;
+}
+.btn {
+    background-color: silver;
+    width: 180px;
+    color: white;
+    font-size: 1.1em;
+    border: 1px solid silver;
+    border-radius: 7px;
+    height: 50px;
+    align-items: center;
+}
+@media screen and (max-width: 708px) {
+    label {
+        display: inline-block;
+        width: 200px;
+        color: rgb(0, 0, 0);
+        text-align: left;
+
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Accueil</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">ENI Memory</a>
+        <img src="images/eni_800x800.jpg" alt="logo eni" id="logo" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/inscription.html">S'inscrire</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Se connecter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Jouer</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1>Connexion</h1>
+    <section class="sectionForm">
+      <fieldset>
+        <legend>Connexion</legend>
+
+        <form action="" method="POST" id="connexionForm">
+          <div>
+            <label for="emailCo">Email : </label>
+            <input
+              type="text"
+              name="emailCo"
+              id="emailCo"
+              placeholder="ex. : user@hotmail.fr"
+              required
+            />
+          </div>
+          <div>
+            <label for="mdpCo">Mot de passe : </label>
+            <input
+              type="password"
+              name="mdpCo"
+              id="mdpCo"
+              required
+              title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            />
+          </div>
+
+          <div class="btnForm">
+            <input type="submit" value="Valider" class="btn" />
+          </div>
+        </form>
+      </fieldset>
+    </section>
+    <script src="/script/connexion.js"></script>
+  </body>
+</html>
