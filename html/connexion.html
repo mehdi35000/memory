@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">ENI Memory</a>
-        <img src="images/eni_800x800.jpg" alt="logo eni" id="logo" />
+        <img src="/images/eni_800x800.jpg" alt="logo eni" id="logo" />
         <button
           class="navbar-toggler"
           type="button"
@@ -59,31 +59,28 @@
     <h1>Connexion</h1>
     <section class="sectionForm">
       <fieldset>
-        <legend>Connexion</legend>
-
         <form action="" method="POST" id="connexionForm">
-          <div>
+          <div class="marginRight">
             <label for="emailCo">Email : </label>
             <input
               type="text"
               name="emailCo"
               id="emailCo"
               placeholder="ex. : user@hotmail.fr"
-              required
-            />
+              required/>           
           </div>
-          <div>
+          <div class="marginRight">
             <label for="mdpCo">Mot de passe : </label>
             <input
               type="password"
               name="mdpCo"
               id="mdpCo"
               required
-              title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            />
+              title="Renseignez un mot de passe (min. 8 caractères dont au moins 1 minuscule, 1 majuscule et un chiffre)"/>
+              <button type="button" id="btn-visibilite-password">
+              <img src="/images/eye-close.png" alt="Icône oeil fermé" id="oeil" width="20px">
+              </button>
           </div>
-
           <div class="btnForm">
             <input type="submit" value="Valider" class="btn" />
           </div>
@@ -91,5 +88,7 @@
       </fieldset>
     </section>
     <script src="/script/connexion.js"></script>
+    <script src="/script/mdpScript.js"></script>
+
   </body>
 </html>

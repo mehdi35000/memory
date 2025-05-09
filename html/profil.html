@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">ENI Memory</a>
-        <img src="images/eni_800x800.jpg" alt="logo eni" id="logo" />
+        <img src="/images/eni_800x800.jpg" alt="logo eni" id="logo" />
         <button
           class="navbar-toggler"
           type="button"
@@ -44,19 +44,28 @@
               <a class="nav-link" href="/html/inscription.html">S'inscrire</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/html/connexion.html">Se connecter</a>
+              <a class="nav-link" href="/html/connexion.html" id="connexion"
+                >Se connecter</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" aria-disabled="true">Profil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Jouer</a>
+              <a
+                class="nav-link disabled"
+                aria-disabled="true"
+                href="/html/memory.html"
+                >Jouer</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <h1>Profil</h1>
-    
+      <h1>Profil</h1>
+      <div class="divProfil">
+      <div class="info" id="infoProfil"></div>
+      </div>
+    <script src="/script/profil.js"></script>
   </body>
 </html>

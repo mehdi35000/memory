@@ -1,27 +1,30 @@
 document.addEventListener("DOMContentLoaded",()=>{
     const connexionForm = document.getElementById("connexionForm");
 
-    connexionForm.addEventListener("submit",(e)=>{
+    connexionForm.addEventListener("submit",(e)=>{ //pour empecher le rechargement de la page lors du submit
         e.preventDefault();
 
-        const emailCo = document.getElementById("emailCo").value;
+        const emailCo = document.getElementById("emailCo").value; 
         const mdpCo = document.getElementById("mdpCo").value;
 
         //Je récupère mon utilisateur stocké dans le local storage
-        const utilisateur = JSON.parse(localStorage.getItem("utilisateur"));
+        const utilisateurs = JSON.parse(localStorage.getItem("utilisateurs"));
+
+        const utilisateur = utilisateurs.find(u => u.email ===emailCo && u.mdp===mdpCo);
 
         //Je verifie si mon utilisateur existe bien dans le local storage
-        if (!utilisateur) {
-            alert("Aucun utilisateur trouvé");
-            return;
-        }
+        if (utilisateur) {
+          alert("Connexion réussie");
+          //J'enregistre l'utilisateur connecté en session
+            sessionStorage.setItem(
+                  "utilisateurConnecte",
+                  JSON.stringify(utilisateur)
+                );
 
-        //Je compare l'email et le mots de passe stocké dans le storage avec ceux renseigné dans le formulaire de connexion
-        if (utilisateur.email === emailCo && utilisateur.mdp === mdpCo) {
-            alert("Connexion réussi !")
-            window.location.href = "/html/profil.html"
-        }else{
-            alert("L'email ou le mot de passe est incorrect");
+          window.location.href = "/html/profil.html";
+          return;
+        } else {
+          alert("L'email ou le mot de passe est incorrect");
         }
     });
 });

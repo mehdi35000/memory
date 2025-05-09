@@ -14,14 +14,14 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Accueil</title>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Memory</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">ENI Memory</a>
-        <img src="/images/eni_800x800.jpg" alt="logo eni" id="logo">
+        <img src="/images/eni_800x800.jpg" alt="logo eni" id="logo" />
         <button
           class="navbar-toggler"
           type="button"
@@ -36,18 +36,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active" aria-current="page" href="/index.html"
                 >Accueil</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="html/inscription.html">S'inscrire</a>
+              <a class="nav-link" href="/html/inscription.html">S'inscrire</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Se connecter</a>
+              <a class="nav-link" href="/html/connexion.html" id="connexion"
+                >Se connecter</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Profil</a>
+              <a class="nav-link disabled" aria-disabled="true" href="/html/profil.html">Profil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" aria-disabled="true">Jouer</a>
@@ -56,34 +58,9 @@
         </div>
       </div>
     </nav>
-    <h1>Bienvenue sur la plateforme ENI memory !</h1>
-    <h2>Le jeu memory c'est quoi ?</h2>
-    <div class="memory-rules">
-      <h2 id="regle">Règles du jeu ENI Memory</h2>
-      <ul>
-        <li>
-          <strong>But du jeu :</strong> Retrouver toutes les paires de cartes
-          identiques en un minimum de coups.
-        </li>
-        <li>
-          <strong>Déroulement :</strong>
-          <ul>
-            <li>Le plateau contient des cartes retournées.</li>
-            <li>À chaque tour, vous retournez <strong>deux cartes</strong>.</li>
-            <li>Si elles sont identiques, elles restent visibles.</li>
-            <li>Sinon, elles se retournent après un court délai.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Fin de partie :</strong> Le jeu se termine lorsque
-          <strong>toutes les paires sont trouvées</strong>.
-        </li>
-      </ul>
-
-      <div class="memory-alert">
-        Vous devez être inscrit(e) pour jouer à ENI Memory !<br />
-        <a href="html/inscription.html" class="btn">Créer un compte</a>
-      </div>
-    </div>
+    <h1>Memory</h1>
+    <div id="plateau"></div>
+    <div id="compteur">Chronomètre: 0</div>
+    <script src="/script/memory.js"></script>
   </body>
 </html>
